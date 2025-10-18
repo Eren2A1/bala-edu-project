@@ -169,4 +169,5 @@ function logDownload(resourceId) {
             }).then(() => console.log("Download logged")).catch(console.error);
         }
     });
+
 }
