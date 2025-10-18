@@ -28,7 +28,7 @@ const resources = [
         title: {kk: 'Эмоцияларды тану', en: 'Recognizing Emotions'},
         desc: {kk: 'Балаларға эмоцияларды ажыратуға көмектесетін карточкалар.', en: 'Cards to help children distinguish emotions.'},
         img: 'images/12.png',
-        file: 'resources/emotion.pdf',
+        file: 'resources/emotion.pdf', // Совпадает с загруженным
         downloads: 0
     },
     {
@@ -38,7 +38,7 @@ const resources = [
         title: {kk: 'Түстерді үйренеміз', en: 'Learning Colors'},
         desc: {kk: 'Негізгі түстерді тануға арналган тапсырмалар.', en: 'Tasks to recognize basic colors.'},
         img: 'images/8.png',
-        file: 'resources/Colours.pdf',
+        file: 'resources/Colours.pdf', // Совпадает
         downloads: 0
     },
     {
@@ -46,49 +46,29 @@ const resources = [
         category: 'fruit',
         age: '3-5',
         title: {kk: 'Жеміс-жидектер', en: 'Fruit'},
-        desc: {kk: 'Балаларға эмоцияларды ажыратуға көмектесетін карточкалар.', en: 'Cards to help children distinguish emotions.'},
+        desc: {kk: 'Балаларға жемістерді тануға көмектесетін карточкалар.', en: 'Cards to help children recognize fruits.'},
         img: 'images/6.png',
-        file: 'resources/Fruits.pdf',
+        file: 'resources/Fruits.pdf', // Совпадает
         downloads: 0
     },
     {
         id: 'Home_animal1',
         category: 'Home_animal',
         age: '3-5',
-        title: {kk: 'үй жануарлары pdf', en: 'Recognizing Emotions'},
-        desc: {kk: 'Балаларға эмоцияларды ажыратуға көмектесетін карточкалар.', en: 'Cards to help children distinguish emotions.'},
+        title: {kk: 'үй жануарлары pdf', en: 'Home Animals'},
+        desc: {kk: 'Үй жануарларын тануға арналған карточкалар.', en: 'Cards to help recognize home animals.'},
         img: 'images/3.png',
-        file: 'resources/Home_animal.pdf',
+        file: 'resources/Home_animal.pdf', // Совпадает
         downloads: 0
     },
     {
         id: 'Vegetables1',
         category: 'Vegetables',
         age: '3-5',
-        title: {kk: 'көкөністер', en: 'Recognizing Emotions'},
-        desc: {kk: 'Балаларға эмоцияларды ажыратуға көмектесетін карточкалар.', en: 'Cards to help children distinguish emotions.'},
+        title: {kk: 'көкөністер', en: 'Vegetables'},
+        desc: {kk: 'Көкөністерді тануға арналған карточкалар.', en: 'Cards to help recognize vegetables.'},
         img: 'images/4.png',
-        file: 'resources/Vegetables.pdf',
-        downloads: 0
-    },
-    {
-        id: 'language1',
-        category: 'language',
-        age: '3-5',
-        title: {kk: 'Alipi', en: 'Learning Colors'},
-        desc: {kk: '-.', en: 'Tasks to recognize basic colors.'},
-        img: 'images/7.png',
-        file: 'resources/Alipi.pdf',
-        downloads: 0
-    },
-    {
-        id: 'sandar1',
-        category: 'sandar',
-        age: '3-5',
-        title: {kk: 'Сандар', en: 'Learning Colors'},
-        desc: {kk: '-.', en: 'Tasks to recognize basic colors.'},
-        img: 'images/10.png',
-        file: 'resources/sandar.pdf',
+        file: 'resources/Vegetables.pdf', // Совпадает
         downloads: 0
     }
 ];
@@ -116,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('category-select').addEventListener('change', filterResources);
     document.getElementById('age-select').addEventListener('change', filterResources);
 
-    // Обработчик для кнопок скачивания (добавляется динамически)
     document.getElementById('resource-list').addEventListener('click', (event) => {
         if (event.target.tagName === 'BUTTON') {
             const resourceId = event.target.dataset.id;
